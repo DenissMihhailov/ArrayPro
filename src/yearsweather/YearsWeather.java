@@ -102,7 +102,17 @@ public class YearsWeather {
                 }
             }
         }
-                System.out.println(minInt);        
+                System.out.println(minInt);  
+                
+            for (int i = 0; i < yearsWeather.length; i++) {
+                for (int j = 0; j < yearsWeather[i].length; j++) {
+                    if(yearsWeather[i][j]==maxInt){
+                    System.out.print(yearsWeather[i][dayInMonth]);
+                    }
+                }
+                
+            
+        }
     }
     
 }
