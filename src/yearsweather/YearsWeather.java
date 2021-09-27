@@ -78,15 +78,31 @@ public class YearsWeather {
         System.out.print("Напишите день в котором хотите узнать погоду:");
         int day= scanner.nextInt();
         System.out.printf("В этот день температура была:%2d",yearsWeather[month-1][day-1]);
+                System.out.println();
+                
         int maxInt=0;
         for (int i = 0; i < yearsWeather.length; i++) {
-            for (int j = 0; j < yearsWeather[i].length; j++) {
+            for (int j = 0; j < yearsWeather.length; j++) {
+                int[] is=yearsWeather[j];     
                 if(maxInt<yearsWeather[i][j]){
                     maxInt=yearsWeather[i][j];
+
                 }
             }
         }
-                System.out.print(maxInt);
+                System.out.println(maxInt);
+        
+            int minInt=0;
+                for (int i = 0; i < yearsWeather.length; i++) {
+            for (int j = 0; j < yearsWeather.length; j++) {
+                int[] is=yearsWeather[j];     
+                if(minInt>yearsWeather[i][j]){
+                    minInt=yearsWeather[i][j];
+
+                }
+            }
+        }
+                System.out.println(minInt);        
     }
     
 }
